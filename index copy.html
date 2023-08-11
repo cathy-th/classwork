@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- Insert relevant content inside the following meta tags-->
+    <meta name="author" content="Author Name">
+    <meta name="description" content="This is a Good Morning Message Maker">
+    <meta property="og:title" content="Good Morning Message Maker" />
+    <meta property="og:description" content="This is a Good Morning Message Maker" />
+
+    <title>Good Morning Message Maker</title>
+
+    <!-- No need to edit this-->
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+
+    <!-- Links to boilerplate CSS and JS files -- DO NOT CHANGE or EDIT THESE!!! -->
+    <link href="./template-files/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./template-files/script.js" defer></script>
+    <script type="text/javascript" src="./template-files/html2canvas.js" defer></script>
+
+
+
+    <!-- Links to YOUR CSS and JS files -->
+    <link href="style-to-edit.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="script-to-edit.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!--DO NOT EDIT THIS -->
+        <button id="openPopup" onclick="showPopup()"> ? </button>
+
+        <!--Insert your Names after the dash -->
+        <h1>'Good Morning Message Maker' – </h1>
+
+    </header>
+    <main>
+
+        <section id="input">
+            <!-- Markup for your inputs and controls go inside this section -->
+            <!-- Image Dropdown Menu -->
+            <br>
+            <h1 id="mainheading">Choose your cat</h1>
+            <br>
+            <br>
+            <label for="imageSelect">Choose Image</label>
+            <select name="dropdown" id="imageSelect" onchange="choosePic()">
+                <option value="">No Image</option>
+                <option value="./images/cat 1.jpeg">Mad Cat</option>
+                <option value="./images/cat 2.jpg">Bleh Cat</option>
+                <option value="./images/cat 3.jpeg">Polite Cat</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <!-- Text Input 1 -->
+            <input type="text" id="theText" placeholder="Change Title 1" oninput="inputMessage()">
+            <br>
+            <br>
+            <!-- Text Input 2 -->
+
+            <input type="text" id="bottomText" placeholder="Change Title 2" oninput="inputMessage2()">
+            <br>
+            <!--Font colour change-->
+            <br>
+            <br>
+            <br>
+
+            <label for="fontColor">Choose Font Color</label>
+
+            <select name="colordropdown" id="fontColor" onchange="chooseColor1()">
+                <option value="">Select a Colour</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="blanchedalmond">Blanched Almond</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="magenta">Magenta</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+            </select>
+            <br>
+            <!-- Radio Button for title -->
+            <br>
+            <br>
+            <br>
+
+            <div>
+                <p style="font-weight: bold;">Choose the font for the Title</p>
+                <input type="radio" id="font1" name="font-options" value="cursive" onclick="fontchoice1()">
+                <label for="font1">Cursive</label>
+                <input type="radio" id="font2" name="font-options" value="sans-serif" onclick="fontchoice2()">
+                <label for="font2">Sans-Serif</label>
+                <input type="radio" id="font3" name="font-options" value="serif" onclick="fontchoice3()">
+                <label for="font3">Serif</label>
+            </div>
+
+            <!-- Range Slider -->
+            <br>
+            <div>
+                <p style="font-weight: bold;">Slide to change Font Size of Title 1</p>
+                <input type='range' id="slider" oninput="funcslide()" min="6px" max="32px">
+            </div>
+            <!-- Radio Buttons for para -->
+            <br>
+            <br>
+            <br>
+            <div>
+                <p style="font-weight: bold;">Choose the font for the Bottom Title</p>
+                <input type="radio" id="fonta" name="font-options" value="cursive" onclick="fontchoicea()">
+                <label for="font1">Cursive</label>
+                <input type="radio" id="fontb" name="font-options" value="sans-serif" onclick="fontchoiceb()">
+                <label for="font2">Sans-Serif</label>
+                <input type="radio" id="fontc" name="font-options" value="serif" onclick="fontchoicec()">
+                <label for="font3">Serif</label>
+            </div>
+            <!-- Range Slider 2 -->
+            <br>
+            <div>
+                <p style="font-weight: bold;">Slide to change Font Size of Tile 2</p>
+                <input type='range' id="slider2" oninput="funcslide2()" min="6px" max="32px">
+            </div>
+            <br>
+            <br>
+            <br>
+            <!-- Text Input 2 -->
+            <p style="font-weight: bold;">Choose the font Stroke</p>
+            <input type="number" id="numberstroke" name="numberstroke" min="0" max="64" step="1"
+                oninput="changenumber()">
+            <br>
+
+        </section>
+
+        <!-- Button to Save Image | DO NOT EDIT THIS -->
+        <button id="save-img">Save Image</button>
+
+        <section id="output">
+            <div id="output-canvas">
+                <!-- Markup for your image and texts go inside this div -->
+                <!-- Use the ID "text-1" for Text 1 -->
+                <!-- Use the ID "text-2" for Text 2 -->
+                <img id="img" src="" alt="Selected Image">
+                <h1 id="text-1">Good Morning</h1>
+                <h2 id="text-2">Hope you have a Good day!</h2>
+            </div>
+        </section>
+
+    </main>
+
+    <!--DO NOT EDIT THIS DIV -->
+    <div id="popupCover" onclick="hidePopup()"></div>
+
+    <!-- 
+        Once you are done with your assignment, replace the instructions text inside the div with id "popup" with the following text: This tool was programmed by [insert names], as part of a unit titled 'Coding for the Web', facilitated during the 2023/24 odd semester at Srishti Manipal Institute. 
+    -->
+    <div id="popup">
+
+        <p>
+            Coding for the Web '23/24 --- Assignment 1:
+        </p>
+        <hr>
+        <br>
+        <li>This page was made by Catherine Thomas and Mehal Kumar, as part of a unit titled 'Coding for the Web',
+            facilitated during
+            the 2023/24 odd semester at Srishti Manipal Institute.
+            <br>
+        </li>
+        </ul>
+        <br>
+        <hr>
+        <hr>
+
+    </div>
+
+</body>

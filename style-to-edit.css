@@ -1,0 +1,70 @@
+/* Your CSS goes here --------------------- */
+
+h1 {
+    color: black;
+}
+
+main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: aliceblue;
+    
+}
+
+input[type=text] {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    border-color:dodgerblue;
+    background-color: #F2EDEB;
+}
+
+input:hover {
+    background-color:rgb(206, 206, 206);
+    font-style: italic;
+
+
+
+}
+
+#input {
+    background-color:rgb(37, 37, 40);
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F2EDEB;
+}
+
+#save-img {
+    border-style: dotted;
+    background-color:#111111;
+    padding: 15px 15px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+#output {
+    background-color:rgb(20, 20, 20);
+
+}
+
+h1 {
+    color: aliceblue;
+}
+
+h2 {
+    color: aliceblue;
+}
+
+#mainheading {
+    font-size: 21px;
+    font-weight: bolder;
+    color: black;
+}
