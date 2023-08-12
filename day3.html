@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+            
+    <head>       
+        <meta charset="utf-8">
+        <meta name="author" content="learn.expandedmetrics.com">
+        <meta name="description" content=" ">
+        <meta name="keywords" content=" ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+        <!-- Socials -->
+        <meta property="og:title" content=" " />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content=" " />
+        <meta property="og:image" content="assets/ .jpg" />
+        <meta property="og:url" content=" .com" />
+        <meta name="twitter:title" content=" ">
+        <meta name="twitter:description" content=" ">
+        <meta name="twitter:image" content="assets/ .jpg">
+        <meta name="twitter:card" content="assets/ .jpg">
+
+        <!-- CSS -->
+        <link href="day3.css" rel="stylesheet" type="text/css">
+                
+        <!--JavaScript -->
+        <script type="text/javascript" src="day3.js" defer></script> 
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="assets/favicon.ico"> 
+
+    </head>    
+
+    <body>
+       <br>
+       <br>
+       <br>
+        <h1 id="heading">Change me</h1>
+        <br>
+        <br>
+        <input type="text" id="myText" placeholder="Type to change heading" oninput="inputText()">
+        <br>
+        <br>
+        <h3 id="subheading">CODiNG FOR WEB:DAY3</h3>
+        <br>
+        <br>
+        <p>Subheading <button id="visibility" onclick="visibilityChange()">Dissappear</button> </p>
+        <br>
+        <br>
+
+            <p id="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+              deserunt mollit anim id est laborum.
+            </p>
+            <br>
+            <p style="font-weight: bold;">Choose the font for the paragraph</p>
+            <input type="radio" id="font1" name="font-options" value="cursive" onclick="fontchoice1()">
+            <label for="font1">Cursive</label>
+            <input type="radio" id="font2" name="font-options" value="sans-serif" onclick="fontchoice2()">
+            <label for="font2">Sans-Serif</label>
+            <input type="radio" id="font3" name="font-options" value="serif" onclick="fontchoice3()">
+            <label for="font3">Serif</label>
+            <br>
+            <br>
+            <br>
+
+        <div id="box"></div>
+        <br>
+        <label for="boxychangy">Change box size</label>
+        <input type="range" id="boxychangy" name="slider" min="400" max="1420" oninput="changeBoxSize()">
+        <br>
+        <br>
+       
+        <img id="img" src="" alt="Selected Image">
+        <br>
+        <label for="imageSelect">Choose Image</label>
+        <select name="dropdowm" id="imageSelect" onchange="chooseImage()">
+        <option value="">Select an Image</option>
+        <option value="./assets/yogurt_1.jpeg">Image 1</option>
+        <option value="./assets/yogurt_2.jpeg">Image 2</option>
+        <option value="./assets/yogurt_3.jpeg">Image 3</option>
+        </select>
+
+        
+
+<br>
+<h2 id="text-1">text</h2>
+<input type="text" id="theText" placeholder="Type to change heading" oninput="inputWord()">
+<br>
+<br>
+
+       
+        
+        
+<br>
+<br>
+<br>
+<br>
+
+    </body>
+
+</html>

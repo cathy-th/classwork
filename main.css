@@ -1,0 +1,24 @@
+#heading {
+    color:blue;
+    text-align: center;
+}
+button:hover {
+    background-color:bisque;
+}
+
+button {
+    padding: 10px;
+    padding-left:30px;
+    padding-right:30px;
+    border-radius: 10px;
+}
+
+h2,h3{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    padding: 10px;
+    border-radius:10px;
+}
