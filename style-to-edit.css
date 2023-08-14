@@ -68,3 +68,7 @@ h2 {
     font-weight: bolder;
     color: black;
 }
+
+p {
+    -webkit-text-stroke-color: black;
+}
