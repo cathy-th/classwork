@@ -1,0 +1,253 @@
+/* --------------------Main Header-------------- */
+
+.heading{
+    position: sticky;
+    top: 0;
+    background-color: #DBD226;
+    border: 6px solid rgb(35, 34, 34);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 18.5vh;
+}
+
+#logo {
+    padding-right:5px;
+    height: 15vh;
+}
+
+h2{
+    margin: 0;
+}
+
+.gridheading{
+    display: grid;
+    width: fit-content;
+    margin: 10px;   
+}
+
+.gridheadingfirst{
+    border: 2px solid rgb(35, 34, 34);
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+.gridheadingsecond{
+    border: 2px solid rgb(35, 34, 34);
+    background-color: yellow;
+    color:blueviolet;
+    padding: 10px;
+}
+
+.gridheadinglast{
+    grid-column: span 2;
+    border: 2px solid rgb(35, 34, 34);
+    background-color: white;
+    color: red;
+    padding: 10px;
+    font-size: 20px;
+    height: fit-content;
+    -webkit-text-stroke: 1px brown;
+}
+
+.main{
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -3px 0px rgb(35, 34, 34);
+    font-size:5vw;
+    text-align: center;
+}
+
+.lastimgheading{
+    margin:0px;
+    margin-top: 4px;
+}
+
+.imgheading{
+   height: 18vh;
+    width: 40vh;
+}
+
+@media screen and (max-width: 600px) {
+    .heading {
+      flex-wrap: wrap;
+      justify-content:center;
+      display:grid;
+      flex-direction: column;
+      height:auto;
+      .gridheading {order: 1;};
+      .mainheading {
+        grid-column: span 2;
+        order: 3;};
+      .lastimgheading {order: 2;};
+
+    }
+    .heading {
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    }
+    #logo{
+        width: 30vw;
+        height: auto;
+    }
+    .imgheading{
+        width: 30vw;
+        height: auto;
+    }
+
+    .main{
+        font-size: 10vw;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .heading {
+      flex-wrap: wrap;
+      display:grid;
+      flex-direction: column;
+      height:auto;
+      .gridheading {order: 1;};
+      .lastimgheading {order: 2;};
+      
+      .mainheading {
+         grid-column: span 2;
+        order: 3;};
+        margin: 0;
+        padding: 0;
+    }
+
+   .gridheading{
+    padding-left: 5vh;
+   }
+    
+    .main {
+        font-size: 10vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .imgheading{
+        width: 35vw;
+    }
+
+    .lastimgheading {
+        margin-right:10px;
+    }
+
+}
+
+
+
+/* --------------------Body Content-------------- */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgb(22, 21, 21);
+    padding: 10px;
+    justify-content: center;
+}
+
+.box {
+    aspect-ratio: 1.3/1;
+    width: 30%;
+    background-color:#eeeae9;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.imagediv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+}
+
+.firstbigpic {
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+
+}
+
+.smallpic {
+    height: 100%;
+    width: 100%;
+}
+
+.firstp {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'Tiro Devanagari Hindi';
+    src: url('TiroDevaHindi-Regular.woff2') format('woff2'),
+        url('TiroDevaHindi-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tiro Devanagari Hindi';
+    src: url('TiroDevaHindi-Italic.woff2') format('woff2'),
+        url('TiroDevaHindi-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+.hindi{
+    font-family: 'Tiro Devanagari Hindi';
+}
+
+.link{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 870px){
+    .box{
+        width: 45%;
+    }
+
+    .firstp {
+    font-size: 110%;
+}
+}
+
+@media screen and (max-width: 600px){
+    .box{
+        width: 95%;
+    }
+
+    .firstp {
+    font-size: 120%;
+}
+}
+
+@media screen and (max-width: 870px) and (min-width: 600px){
+    .box{
+        width: 45%;
+    }
+}
+
+
+.link{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #DBD226;
+    padding: 20px;
+}

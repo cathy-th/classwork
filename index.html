@@ -4,41 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheeti.css" rel="stylesheet" type="text/css">
+   <script src="index.js" defer></script>
+   <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+ />
+ 
+ <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title>Document</title>
+
     
 </head>
 <body>
-    <a href="classassignment1.html"> Class assignment(8th Aug)</a>
-    <br>
-    <br>
-    <a href="index2.html">CSS Selector Exercise</a>
-    <br>
-    <br>
-    <a href="day3.html">Basic JS Exercise - inputs</a>
-    <br>
-    <br>
-    <a href="index copy.html"> D4-A1</a>
-    <br>
-    <br>
-    <a href="D5.E1_css_positions/index.html">D5-CSS Layouts</a>
-    <br>
-    <br>
-    <a href="./D6.E1_css_responsive/index.html">D6-CSS responsiveness</a>
-    <br>
-    <br>
-    <a href="./Website documentation/a2.html"> D7-Website Documentation</a>
-    <br>
-    <br>
-
-    <a href="./A2 reworked/index.html"> D10-A2.2</a>
-    <br>
-    <br>
-    <a href="./d9/d9.html"> D9-Event Listeners</a>
-    <br>
-    <br>
-    <a href="./boombox/music.html"> D11-Making a Webpage</a>
-    <br>
-    <br>
+  
     
+    <section class="hero">
+        <div class="text-container">
+          <span id="element"></span>
+
+      <!-- Load library from the CDN -->
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+      <!-- Setup and start animation! -->
+      <script>
+        var typed = new Typed('#element', {
+          strings: ['<i>CATHERINE THOMAS<i>', 'CODING FOR WEB'],
+          typeSpeed: 100,
+        });
+      </script>
+        </div>
+      </section>
+
+      <div>
+        <p id="message">I can't seem to figure out why the arrows dissappear on day 2 so please use only the left arrow on the left to navigate :)</p>
+      </div>
+
+
+
+
+
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div id="1" class="swiper-slide" > <a href="classassignment1.html"><button>DAY1</button></a></div>
+      <div id="2" class="swiper-slide"><a href="index2.html"><button>DAY2</button></a></div>
+      <div id="3" class="swiper-slide"><a href="day3.html"><button>DAY3</button></a></div>
+      <div id="a1" class="swiper-slide"><a href="index copy.html"><button>A1</button></a></div>
+      <div id="5" class="swiper-slide"><a href="D5.E1_css_positions/index.html"><button>DAY5</button></a></div>
+      <div id="6"class="swiper-slide"><a href="./D6.E1_css_responsive/index.html"><button>DAY6</button></a></div>
+      <div id="7" class="swiper-slide"><a href="./Website documentation/a2.html"><button>DAY7</button></a></div>
+      <div id="8" class="swiper-slide"><a href="./A2.1/index.html"><button>A2.1</button></a></div>
+      <div id="9" class="swiper-slide"><a href="./d9/d9.html"><button>DAY9</button></a></div>
+      <div id="10" class="swiper-slide"><a href="./A2.2/A2index.html"><button>A2.2</button></a></div>
+      <div id="11" class="swiper-slide"><a href="./boombox/music.html"><button>DAY11</button></a>
+   
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+<div id="links">
+        
+  
+    <a class="8" href="./A2 reworked/index.html"> D10-A2.2</a>
+   
+      
+   
+       <a class="9" href="./d9/d9.html"> D9-Event Listeners</a>
+   
+     
+    
+       <a class="10" href="./boombox/music.html"> D11-Making a Webpage</a>
+   
+       </div>
+
 </body>
 </html>

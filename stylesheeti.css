@@ -1,16 +1,68 @@
-body {
-    background-color:antiquewhite; 
+
+.swiper-slide {
+    text-align: center;
+    top: 7%;
+    color: #90b87d;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 300%;
+    
 }
+
+.swiper-wrapper {
+    background-color: rgb(22, 21, 21);
+}
+
+.swiper {
+    width: 100%;
+    background-color:  rgb(22, 21, 21);
+    height: 300px;
+}
+
+
+#message {
+    color: rgb(102, 100, 98);
+    text-align: center;
+}
+
+body {
+    background-color:rgb(22, 21, 21); 
+}
+
 button {
 
-    padding: 20px;
+    padding:5%;
+    padding-left: 20%;
+    padding-right: 20%;
     border-radius: 10px;
-    border-top:30px;
-    border-left: 30px;
-    background-color:antiquewhite;
-    border-color:rgb(255, 176, 85) ;
+    background-color: rgb(22, 21, 21);
+    font-size: 200% ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #90b87d;
+    
+}
+button:hover {
+    background-color: #90b87d;
+    color:  rgb(22, 21, 21) ;
 }
 
-button:hover {
-    background-color:rgb(230, 141, 40);
+
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90b87d;
+  }
+  
+  .text-container {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 500%;
+  }
+
+p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+

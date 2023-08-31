@@ -1,6 +1,3 @@
-
-
-
 /* --------------------Main Header-------------- */
 
 .heading{
@@ -8,7 +5,7 @@
     top: 0;
     background-color: #DBD226;
     border: 6px solid rgb(35, 34, 34);
-display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
@@ -92,17 +89,19 @@ h2{
         padding: 0;
         justify-content: space-between;
     }
+    #logo{
+        width: 30vw;
+        height: auto;
+    }
     .imgheading{
-        width: 20vh;
+        width: 30vw;
+        height: auto;
     }
 
     .main{
         font-size: 10vw;
         padding: 0;
         margin: 0;
-    }
-    .mainheading {
-        font-size: 10vh;
     }
 }
 
@@ -127,7 +126,7 @@ h2{
    }
     
     .main {
-        font-size: 7vh;
+        font-size: 14vh;
         padding: 0;
         margin: 0;
     }
@@ -140,20 +139,8 @@ h2{
         margin-right:10px;
     }
 
-   
 }
 
-@media screen and (max-width: 400px) {
-    #logo {
-        width: 60%;
-        height: 20vw
-        
-    }
-    .imgheading{
-        height:20vw
-       
-    }
-}
 /* --------------------Body Content-------------- */
 
 .container {
@@ -192,7 +179,7 @@ h2{
 
 .firstp {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 80%;
+    font-size: 100%;
 }
 
 p {
@@ -232,12 +219,20 @@ p {
     .box{
         width: 45%;
     }
+
+    .firstp {
+    font-size: 110%;
+}
 }
 
 @media screen and (max-width: 600px){
     .box{
         width: 95%;
     }
+
+    .firstp {
+    font-size: 120%;
+}
 }
 
 @media screen and (max-width: 870px) and (min-width: 600px){
@@ -246,8 +241,11 @@ p {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .box{
-        width: 95%;
-    }
+
+.link{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #DBD226;
+    padding: 20px;
 }

@@ -1,0 +1,16 @@
+id,bigImage,sTopImg,sBotImg,engTitle,hinTitle
+cont1,./assets/1.1.jpeg,./assets/1.2.jpeg,./assets/1.3.jpeg,APPLE LEAF - APPLE FRUIT,सेव
+cont2,./assets/2.1.jpeg,./assets/2.2.jpeg,./assets/2.3.jpeg,FIG LEAF - FIG FRUIT,अंजीर
+cont3,./assets/3.1.jpeg,./assets/3.2.jpeg,./assets/3.3.jpeg,GRAPES LEAF - GRAPES FRUIT,अंगूर
+cont4,./assets/4.1.jpeg,./assets/4.2.jpeg,./assets/4.3.jpeg,CASHEW LEAVES - CASHEW NUT,काजू
+cont5,./assets/5.1.jpeg,./assets/5.2.jpeg,./assets/5.3.jpeg,MANGO LEAVES - MANGO FRUIT,आम
+cont6,./assets/6.1.jpeg,./assets/6.2.jpeg,./assets/6.3.jpeg,BANANA LEAVES - BANANA FRUIT,केला
+cont7,./assets/7.1.jpeg,./assets/7.2.jpeg,./assets/7.3.jpeg,STRAWBERRY LEAVES - STRAWBERRY FRUIT,स्ट्रॉबेरी
+cont8,./assets/8.1.jpeg,./assets/8.2.jpeg,./assets/8.3.jpeg,COCONUT LEAVES - COCONUT FRUIT,नारियल
+cont9,./assets/9.1.jpeg,./assets/9.2.jpeg,./assets/9.3.jpeg,POMEGRANATE LEAVES - POMEGRANATE FRUIT,अनार
+cont10,./assets/10.1.jpeg,./assets/10.2.jpeg,./assets/10.3.jpeg,CHIKOO LEAVES - CHIKOO FRUIT,चीकू
+cont11,./assets/11.1.jpeg,./assets/11.2.jpeg,./assets/11.3.jpeg,MULBERRY LEAVES - MULBERRY FRUIT,शहतूत
+cont12,./assets/12.1.jpeg,./assets/12.2.jpeg,./assets/12.3.jpeg,CUSTARD APPLE LEAVES - CUSTARD APPLE FRUIT,सीताफल
+cont13,./assets/13.1.jpeg,./assets/13.2.jpeg,./assets/13.3.jpeg,JACKFRUIT LEAVES - JACKFRUIT FRUIT,कटहल
+cont14,./assets/14.1.jpeg,./assets/14.2.jpeg,./assets/14.3.jpeg,JUJUBE LEAVES - JUJUBE FRUIT,बेर
+cont15,./assets/15.1.jpeg,./assets/15.2.jpeg,./assets/15.3.jpeg,WATERMELON LEAVES - WATERMELON FRUIT,तरबूज

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Tiro Devanagari Hindi';
+    src: url('TiroDevaHindi-Regular.woff2') format('woff2'),
+        url('TiroDevaHindi-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tiro Devanagari Hindi';
+    src: url('TiroDevaHindi-Italic.woff2') format('woff2'),
+        url('TiroDevaHindi-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
