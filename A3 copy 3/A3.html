@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="learn.expandedmetrics.com">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <title>Plate Waste</title>
+
+    <!-- Socials -->
+    <meta property="og:title" content=" " />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content=" " />
+    <meta property="og:image" content="assets/ .jpg" />
+    <meta property="og:url" content=" .com" />
+    <meta name="twitter:title" content=" ">
+    <meta name="twitter:description" content=" ">
+    <meta name="twitter:image" content="assets/ .jpg">
+    <meta name="twitter:card" content="assets/ .jpg">
+
+    <!-- CSS -->
+    <link href="A3.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./font/Oswald_transfonter.org-20230907-051732/font.css">
+            
+    <!--JavaScript -->
+    <script type="text/javascript" src="A3.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/favicon.ico"> 
+    <title>Plate Chart</title>
+  
+    
+    
+     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="A3.css">
+        <script src="A3.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    </head>
+    <body>
+
+
+
+
+
+      </header>
+      <div id="hiddenSection" style="display: none;">
+        <!-- Your hidden section content goes here -->
+        <br>
+        <input type="number" class="input-box" id="plateInput" placeholder="Number of portions wasted">
+        <button class="button" onclick="updatePlates()">Update</button>
+        <br>
+        <br>
+        <br>
+        <div class="button-container">
+            <input type="number" class="input-box" id="foodWasteInput" placeholder="Today's Food Waste (grams)">
+            <button class="button" onclick="updateFoodWaste()">Update</button>
+            <br>
+            <br>
+            <div id="resetButton">
+                <button class="button" onclick="resetCumulativeWeight()">Reset Cumulative Weight</button>
+            </div>
+            <br>
+            <br>
+            <button class="button"> <a href="./A3.html"> Save</a></button>
+            <br>
+            <br>
+        </div>
+      </div>
+    
+
+    <!-- Toggle Button -->
+    <div id="button_hiddenSection">
+        <button id="toggleButton" onclick="toggleHiddenSection()">
+            <span id="arrowIcon">&#9660;</span> <!-- Downward arrow entity -->
+        </button>
+    </div>
+
+
+        <div class="slideshow-container">
+          
+          
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+          </div>
+            <div id="big_cont">
+             <p id="weight_statement"><span id="cumultative">CUMULTATIVE</span> <br> <span id="weight">WEIGHT:</span><br> <span id="cumulativeWeightValue">0 g</span></p>
+            <br>
+           
+    
+    <div id="plateRotate">
+    <img class="rotate" src="./images/plate_pic.png" alt="logo">
+  </div>
+</div>
+<p id="since">since 6/8/23</p>
+  </div>
+  <div>
+ 
+            
+
+          </div>
+    
+          <div class="mySlides fade">
+                <div id="slide1"> 
+                  <div id="header">
+                    <div>
+                      <p id="head">NUMBER OF PORTIONS WASTED</p>
+                      <p id="heading">YESTERDAY</p>
+                    </div>
+                    <span id="plateCount"></span>
+                  </div>
+                  <br>
+                  <div id="chart-container">
+                    <div id="chart">
+                      <!-- Your chart content here -->
+                    </div>
+                  </div>
+              
+    
+            
+              <!-- The dots/circles -->
+              <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        
+
+      </div>
+      </div>
+      </div>
+
+      
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  
+    </body>
+    </html>
+
+
+
+
+ 

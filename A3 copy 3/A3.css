@@ -1,0 +1,328 @@
+
+
+ /* Food wasted yesterday chart */
+ 
+ 
+ html{
+  background-color:rgb(33, 27, 78) ;
+ }
+
+ #chart {
+    display: grid;
+    gap: 10px; 
+    width: 80%;
+    position: relative;
+    left: 5%;
+    top:20%;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Default size for larger screens */
+  
+  }
+  #chart-container {
+    max-height: 60%; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  #plateCount {
+    font-family: 'Oswald Bold';
+    color: rgb(146, 120, 170);
+    font-size: 11vw;
+    position: relative;
+    right: 50%;
+    line-height: 0.5;
+
+    
+
+  }
+
+@keyframes scroll {
+  0% {
+      transform: translateY(0%);
+  }
+  100% {
+      transform: translateY(-100%);
+  }
+}
+  .plate-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+   }
+
+  #head {
+   
+    font-family: 'Oswald SemiBold';
+    color: rgb(146, 120, 170);
+    font-weight: bold; /* Make it bold, if needed */
+    position: relative;
+    left: 20%;
+    font-size: 2.5vw;
+
+    
+    
+
+ 
+    
+  }
+  #heading {
+    font-family: 'Oswald SemiBold';
+    color: rgb(146, 120, 170);
+    margin: 0;
+    font-size: 6.5vw;
+    position: relative;
+    left: 20%;
+    line-height: 0.2;
+    margin-bottom: 10%;
+    
+
+   
+  }
+    
+#header {
+  display: flex;
+  justify-content: space-between; /* Space between head and plateCount */
+  align-items: center; /* Vertically center the content */
+  text-align: left; /* Left-align the text within the container */
+  margin-bottom: 20px; /* Add some spacing between header and chart */
+}
+  
+
+
+
+#top-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+/* Updation section */
+#hiddenSection {
+  display: none;
+  text-align: center; /* Center align the content inside hiddenSection */
+  background-color: rgb(33, 27, 78);
+}
+
+.input-box {
+  width: 70%;
+  padding: 1%;
+  margin: 5px auto; /* Center the input horizontally */
+  border-radius:7px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+}
+
+.button {
+  margin: 5px auto; /* Center the button horizontally */
+  border-radius: 8px;
+  border: 0;
+  background-color: rgb(249, 249, 246);
+  padding:5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 1.vw;
+
+
+  
+}
+
+.button:hover {
+  background-color: rgb(146, 120, 170) ;
+}
+
+#toggleButton {
+
+border-radius: 5px;
+border: none;
+width: 30%;
+
+}
+
+
+
+#button_hiddenSection {
+  display: flex;
+  justify-content: center;
+
+}
+#button_hiddenSection:hover {
+  background-color:rgb(146, 120, 170);
+}
+#slideoverflow{
+  overflow-y: scroll;
+}
+
+#arrowIcon {
+  color: aliceblue;
+}
+
+#toggleButton {
+  background-color:rgb(33, 27, 78) ;;
+}
+
+#big_cont {
+  display:inline-flex;
+  justify-content: space-between;
+}
+
+#weight_statement {
+  font-family:'Oswald SemiBold';
+  color: rgb(146, 120, 170);
+  font-size: 7vw;
+  padding: 0%;
+  margin: 0;
+  text-align: left;
+  position: absolute;
+  left: 10%;
+  top:50%;
+  line-height: 1;
+  z-index: -1;
+  
+}
+
+#cumultative {
+  font-size: 4vw;
+  padding: 0%;
+  margin: 0%;
+  
+}
+
+#weight {
+  font-size: 6.5vw;
+  padding: 0%;
+  margin: 0%;
+  
+}
+
+/*rotating image*/
+.rotate{
+  animation: rotateImg 40s linear infinite;
+}
+@keyframes rotateImg{
+  from {
+   transform: rotate(0deg);
+  }
+ to {
+  transform: rotate(359deg);
+ }
+
+
+}
+.rotate {
+  position:absolute;
+  right:-30%;
+  width: 80%;
+  aspect-ratio: 1/1;
+  top: 5%;
+  z-index: -1;
+  
+   
+}
+
+#plateRotate {
+  max-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+
+#since {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(146, 120, 170);
+  font-size: 2vw;
+  padding: 0%;
+  margin: 0;
+  position: absolute;
+  left: 10%;
+  top: 90%;
+  z-index: -1;
+}
+
+#cumulativeWeightValue {
+  font-family:'Oswald SemiBold';
+  color: rgb(146, 120, 170);
+  font-size: 9.9vw;
+  z-index: -1;
+  
+}
+
+@media screen and (max-width: 799px) {
+  #chart {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust columns for screens between 400px and 799px */
+  }
+}
+
+/* Media query for screens with a maximum width of 400px (up to 400px) */
+@media screen and (max-width: 450px) {
+  #chart {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Adjust columns for screens up to 400px wide */
+    
+  }
+  #chart-container {
+    max-height: 400px; /* Adjust the maximum height as needed */
+  }
+  #plateCount {
+    font-family: 'Oswald Bold';
+    color: rgb(146, 120, 170);
+    font-size: 11vw;
+    position: relative;
+    right: 47%;
+    line-height: 0.5;
+  }
+  #weight_statement {
+    font-family:'Oswald SemiBold';
+    color: rgb(146, 120, 170);
+    font-size: 7vw;
+    padding: 0%;
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    top:30%;
+    line-height: 1;
+    
+  }
+}
+@media screen and (max-width: 300px) {
+  #chart {
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); /* Adjust columns for screens up to 400px wide */
+    
+  }
+  #weight_statement {
+   
+    top:25%;
+  }
+}
+  @media screen and (max-width: 200px) {
+    #chart {
+      grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); /* Adjust columns for screens up to 400px wide */
+      
+    }
+    #weight_statement {
+   
+    top:15%;
+  }
+}
+  #count-up {
+    font-size: 300%;
+    color: rgb(3, 26, 33);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+
+
+  #slide1 {
+    background-color:rgb(33, 27, 78) ; ;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+body {
+  overflow-x:hidden;
+  overflow-y: hidden;
+}
+  
