@@ -9,15 +9,15 @@
     <title>Plate Waste</title>
 
     <!-- Socials -->
-    <meta property="og:title" content=" " />
+    <meta property="og:title" content="Plate Waste" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content=" " />
-    <meta property="og:image" content="assets/ .jpg" />
+    <meta property="og:description" content="Displays the amount of food waste over a span of time to help PG residents and owners understand the quantity of food being wasted each day  " />
+    <meta property="og:image" content="./images/plate_pic.png" />
     <meta property="og:url" content=" .com" />
-    <meta name="twitter:title" content=" ">
-    <meta name="twitter:description" content=" ">
-    <meta name="twitter:image" content="assets/ .jpg">
-    <meta name="twitter:card" content="assets/ .jpg">
+    <meta name="twitter:title" content="Plate Waste ">
+    <meta name="twitter:description" content="Displays the amount of food waste over a span of time to help PG residents and owners understand the quantity of food being wasted each day ">
+    <meta name="twitter:image" content="./images/plate_pic.png">
+    
 
     <!-- CSS -->
     <link href="A3.css" rel="stylesheet" type="text/css">
@@ -29,8 +29,8 @@
    
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="assets/favicon.ico"> 
-    <title>Plate Chart</title>
+    <link rel="shortcut icon" href="./images/plate_pic.png"> 
+    <title>Food waste</title>
   
     
     
@@ -43,101 +43,120 @@
     
     </head>
     <body>
-
-
-
-
-
-      </header>
-      <div id="hiddenSection" style="display: none;">
-        <!-- Your hidden section content goes here -->
-        <br>
-        <input type="number" class="input-box" id="plateInput" placeholder="Number of portions wasted">
-        <button class="button" onclick="updatePlates()">Update</button>
-        <br>
-        <br>
-        <br>
-        <div class="button-container">
-            <input type="number" class="input-box" id="foodWasteInput" placeholder="Today's Food Waste (grams)">
-            <button class="button" onclick="updateFoodWaste()">Update</button>
-            <br>
-            <br>
-            <div id="resetButton">
-                <button class="button" onclick="resetCumulativeWeight()">Reset Cumulative Weight</button>
+                  <!-- Hidden Section -->
+          <div id="hiddenSection" style="display: none;">
+            <!-- Password Section -->
+            <div id="passwordSection">
+              <input type="password" class="input-box" id="passwordInput" placeholder="Enter Password">
+              <button class="button" onclick="checkPassword()">Submit</button>
+              <p id="passwordMessage"></p>
+              <p id="passwurd">the password...is password</p>
             </div>
-            <br>
-            <br>
-            <button class="button"> <a href="./A3.html"> Save</a></button>
-            <br>
-            <br>
-        </div>
-      </div>
-    
 
-    <!-- Toggle Button -->
-    <div id="button_hiddenSection">
-        <button id="toggleButton" onclick="toggleHiddenSection()">
-            <span id="arrowIcon">&#9660;</span> <!-- Downward arrow entity -->
-        </button>
-    </div>
+            <br>
 
+            <!--Hidden section unlocked -->
+            <div id="contentSection" style="display: none;">
+              <!-- Input for Number of Portions Wasted -->
+              <input type="number" class="input-box" id="plateInput" placeholder="Number of portions wasted">
+              <button class="button" onclick="updatePlates()">Update</button>
+              <br>
+              <br>
+              <br>
 
-        <div class="slideshow-container">
-          
-          
+              <!-- Button Container for Food Waste Input -->
+              <div class="button-container">
+                <!-- Input for Today's Food Waste (grams) -->
+                <input type="number" class="input-box" id="foodWasteInput" placeholder="Today's Food Waste (grams)">
+                <button class="button" onclick="updateFoodWaste()">Update</button>
+                <br>
+                <br>
+                
+                <!-- Reset Cumulative Weight Button -->
+                <div id="resetButton">
+                  <button class="button" onclick="resetCumulativeWeight()">Reset Cumulative Weight</button>
+                </div>
+                <br>
+                <br>
 
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
+                <!-- Save Button with Link -->
+                <button class="button"> <a href="./A3.html"> Save</a></button>
+                <br>
+                <br>
+              </div>
+            </div>
           </div>
-            <div id="big_cont">
-             <p id="weight_statement"><span id="cumultative">CUMULTATIVE</span> <br> <span id="weight">WEIGHT:</span><br> <span id="cumulativeWeightValue">0 g</span></p>
-            <br>
-           
-    
-    <div id="plateRotate">
-    <img class="rotate" src="./images/plate_pic.png" alt="logo">
-  </div>
-</div>
-<p id="since">since 6/8/23</p>
-  </div>
-  <div>
- 
-            
 
+          <!-- Toggle Button -->
+          <div id="button_hiddenSection">
+            <button id="toggleButton" onclick="toggleHiddenSection()">
+              <span id="arrowIcon">&#9660;</span> <!-- Downward arrow entity -->
+            </button>
           </div>
-    
-          <div class="mySlides fade">
-                <div id="slide1"> 
-                  <div id="header">
-                    <div>
-                      <p id="head">NUMBER OF PORTIONS WASTED</p>
-                      <p id="heading">YESTERDAY</p>
-                    </div>
-                    <span id="plateCount"></span>
-                  </div>
-                  <br>
-                  <div id="chart-container">
-                    <div id="chart">
-                      <!-- Your chart content here -->
-                    </div>
-                  </div>
+
+          <!-- Slideshow Container -->
+          <div class="slideshow-container">
+            <!-- First Slide -->
+            <div class="mySlides fade">
+              <div id="big_cont" class="container">
+                <!-- Plate Rotation Image -->
+                <div id="plateRotate">
+                  <img class="rotate" src="./images/plate_pic.png" alt="logo">
+                </div>
+                
+                <!-- Total Plate Waste Information -->
+                <div id="weight_statement">
+                  <p id="cumulative">TOTAL PLATE WASTE</p>
+                  <p id="weight">SINCE 6/8/23</p>
+                  <p id="cumulativeWeightValue">0 g</p>
+                </div>
+              </div>
+              <br>
+              <br>
               
-    
-            
-              <!-- The dots/circles -->
-              <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
+              
+              <!-- Yesterday's Plate Waste -->
+              <div id="yestWeight">
+                <p id="totalPlateWaste">TOTAL PLATE WASTE</p>
+                <p id="yesterday">YESTERDAY</p>
+                <p id="countUpValue">0 g</p>
+              </div>
             </div>
-        
 
-      </div>
-      </div>
-      </div>
+            <!-- Second Slide -->
+            <div class="mySlides fade">
+              <div id="slide1"> 
+                
+               
+                <div id="header">
+                  <div>
+                    <p id="head">NUMBER OF PORTIONS WASTED</p>
+                    <p id="heading">YESTERDAY</p>
+                  </div>
+                  <span id="plateCount"></span>
+                </div>
+                <br>
+                
+                <!-- Chart Container -->
+                <div id="chart-container">
+                  <div id="chart">
+                    <!-- The Plate Chart -->
+                  </div>
+                </div>
+              
+                <!-- Navigation Dots -->
+                <div class="dot-container" style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      
+          <!-- External Scripts -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 
   
     </body>

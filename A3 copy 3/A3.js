@@ -6,7 +6,7 @@ function initializePlates() {
   const chartDiv = document.getElementById('chart');
   chartDiv.innerHTML = '';
 
-  // Create and append image elements
+  
   for (let i = 0; i < numberOfPlates; i++) {
     const plateImage = document.createElement('img');
     plateImage.className = 'plate-image'; 
@@ -19,7 +19,7 @@ function initializePlates() {
   plateCount.textContent = `${numberOfPlates}`;
 }
 
-// Call initializePlates when the page loads
+
 window.addEventListener('load', initializePlates);
 
 // Call updatePlates when the "Update" button is clicked
@@ -31,20 +31,35 @@ function updatePlates() {
     // Store the updated number of plates in local storage
     localStorage.setItem('numberOfPlates', numberOfPlates);
 
-    // Call initializePlates to update the images and plate count
+  
     initializePlates();
   }
 }
 
 
 
-// Initialize cumulative weight from local storage or set it to 0 if it doesn't exist
+
+
+
+
+
+// Function to update the displayed cumulative weight & the last entered weight
+
 let cumulativeWeight = parseInt(localStorage.getItem('cumulativeWeight')) || 0;
+
+
+let lastEnteredWeight = parseInt(localStorage.getItem('lastEnteredWeight')) || 0;
 
 // Function to update the displayed cumulative weight
 function updateCumulativeWeightDisplay() {
   const cumulativeWeightValue = document.getElementById('cumulativeWeightValue');
   cumulativeWeightValue.textContent = cumulativeWeight + ' g';
+}
+
+// Function to update the displayed last entered weight
+function updateLastEnteredWeightDisplay() {
+  const lastEnteredWeightValue = document.getElementById('countUpValue');
+  lastEnteredWeightValue.textContent = lastEnteredWeight + ' g';
 }
 
 // Function to update the displayed cumulative weight with the count-up effect
@@ -53,9 +68,9 @@ function updateCumulativeWeightWithCountUp() {
   const targetWeight = cumulativeWeight; // Store the target cumulative weight
   let currentWeight = 0;
 
-  // Create a timer to increment the displayed weight
-  const updateInterval = 20; // Adjust this for the desired speed
-  const increment = Math.floor(targetWeight / (5000 / updateInterval)); // Increment based on the desired duration
+  
+  const updateInterval = 20; 
+  const increment = Math.floor(targetWeight / (5000 / updateInterval));
 
   const updateDisplay = () => {
     currentWeight += increment;
@@ -70,16 +85,16 @@ function updateCumulativeWeightWithCountUp() {
   const countUpInterval = setInterval(updateDisplay, updateInterval);
 }
 
-// Call the function to update the cumulative weight display with count-up effect when the page loads
+
 updateCumulativeWeightWithCountUp();
 
 
-
-
-
-// Call the function to update the cumulative weight display when the page loads
 updateCumulativeWeightDisplay();
 
+
+updateLastEnteredWeightDisplay();
+
+// Function to update both cumulative weight and last entered weight
 function updateFoodWaste() {
   const foodWasteInput = document.getElementById('foodWasteInput');
 
@@ -88,23 +103,45 @@ function updateFoodWaste() {
     cumulativeWeight += weight; // Add the new weight to the cumulative weight
     localStorage.setItem('cumulativeWeight', cumulativeWeight); // Store the updated cumulative weight in local storage
 
-    // Update the displayed cumulative weight
+   
     updateCumulativeWeightDisplay();
+
+    
+    lastEnteredWeight = weight;
+    localStorage.setItem('lastEnteredWeight', lastEnteredWeight); // Store the last entered weight in local storage
+
+    // Update the displayed last entered weight
+    updateLastEnteredWeightDisplay();
 
     // Clear the input field
     foodWasteInput.value = '';
   }
 }
 
-function resetCumulativeWeight() {
-  cumulativeWeight = 0; // Reset the cumulative weight to 0
-  localStorage.setItem('cumulativeWeight', cumulativeWeight); // Store the updated cumulative weight in local storage
 
-  // Update the displayed cumulative weight
+// Function to reset the cumulative weight to 0 when reset is pressed
+function resetCumulativeWeight() {
+  cumulativeWeight = 0; 
+  localStorage.setItem('cumulativeWeight', cumulativeWeight); 
+
+  
   updateCumulativeWeightDisplay();
 }
 
 
+updateCumulativeWeightWithCountUp();
+
+
+updateLastEnteredWeightDisplay();
+
+
+
+
+
+
+
+
+//Function for toggling hidden section on top
 
 function toggleHiddenSection() {
   var hiddenSection = document.getElementById("hiddenSection");
@@ -115,6 +152,9 @@ function toggleHiddenSection() {
   }
 }
 
+
+
+//Function for automatic carousel
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -134,8 +174,8 @@ function autoCarousel() {
   plusSlides(1); 
 }
 
-// Start automatic carousel with an interval of 3 seconds (3000 milliseconds)
-var interval = setInterval(autoCarousel, 7000);
+// Start automatic carousel 
+var interval = setInterval(autoCarousel, 9000);
 
 function showSlides(n) {
   var i;
@@ -156,20 +196,56 @@ function showSlides(n) {
 
 
 
+
+// function for password to access hidden section
+const correctPassword = "password"; 
+
 function toggleHiddenSection() {
-  var hiddenSection = document.getElementById("hiddenSection");
-  if (hiddenSection.style.display === "none" || hiddenSection.style.display === "") {
-      hiddenSection.style.display = "block";
-  } else {
-      hiddenSection.style.display = "none";
-  }
+    var hiddenSection = document.getElementById("hiddenSection");
+    var overlay = document.getElementById("overlay");
+
+    if (hiddenSection.style.display === "none" || hiddenSection.style.display === "") {
+        hiddenSection.style.display = "block";
+        overlay.style.display = "block"; 
+    } else {
+        hiddenSection.style.display = "none";
+        overlay.style.display = "none"; 
+       
+        document.getElementById("passwordInput").value = "";
+        document.getElementById("passwordMessage").textContent = "";
+        
+        document.getElementById("contentSection").style.display = "none";
+    }
 }
 
+
+function checkPassword() {
+    const passwordInput = document.getElementById("passwordInput").value;
+    const passwordMessage = document.getElementById("passwordMessage");
+
+    if (passwordInput === correctPassword) {
+        // Password is correct, show the content section
+        document.getElementById("contentSection").style.display = "block";
+        
+        document.getElementById("passwordSection").style.display = "none";
+        
+        document.getElementById("overlay").style.display = "none";
+    } else {
+        // Password is incorrect, display an error message
+        passwordMessage.textContent = "Password incorrect. Please try again.";
+    }
+}
+
+
+
+
+
 // Function to continuously scroll the chart container
+
 function autoScrollChart() {
   const chartContainer = document.getElementById('chart-container');
   
-  // Scroll down by a certain amount (adjust as needed)
+  
   chartContainer.scrollTop += 1;
   
   // Reset the scroll position when it reaches the bottom
@@ -178,5 +254,5 @@ function autoScrollChart() {
   }
 }
 
-// Set an interval to auto-scroll the chart container (adjust the interval duration as needed)
-const scrollInterval = setInterval(autoScrollChart, 50); // Change the interval duration as needed
+// Interval to auto-scroll the chart container 
+const scrollInterval = setInterval(autoScrollChart, 50); 
